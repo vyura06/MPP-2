@@ -14,7 +14,8 @@ namespace FakerLib.Generator.Impl
         public object Generate(Type t)
         {
             if (CanGenerate(t))
-                return new DateTime(_random.Next(1, 9999), _random.Next(1, 12), _random.Next(1, 28));
+                return new DateTime(_random.Next(1, 9999), _random.Next(1, 12), _random.Next(1, 28), 
+                    _random.Next(1, 23), _random.Next(1, 59), _random.Next(1, 59));
             throw new ArgumentException($"Cannot create object of type: {t}");
         }
     }
